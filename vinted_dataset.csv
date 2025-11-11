@@ -1,0 +1,31 @@
+id,brand,category,condition,original_price,second_hand_price,source,size,color
+1,Zara,Jacket,Like New,59.99,28.50,Vinted,M,Beige
+2,Nike,Sneakers,Good,89.99,45.00,Wallapop,42,White
+3,H&M,T-shirt,Excellent,14.99,7.00,Vinted,L,Black
+4,Levi's,Jeans,Very Good,89.00,38.00,Wallapop,32,Blue
+5,Mango,Coat,Like New,120.00,55.00,Vinted,S,Grey
+6,Adidas,Sweatshirt,Good,64.99,28.00,Wallapop,M,Green
+7,Uniqlo,Shirt,Excellent,39.99,19.00,Vinted,L,White
+8,Pull&Bear,Sweater,Good,29.99,14.50,Wallapop,M,Brown
+9,Bershka,Dress,Very Good,49.99,22.00,Vinted,S,Red
+10,Converse,Shoes,Good,74.99,35.00,Wallapop,41,Black
+11,Reebok,Sneakers,Excellent,79.99,36.00,Vinted,43,Blue
+12,Puma,Shorts,Good,24.99,11.50,Wallapop,M,Black
+13,New Balance,Sneakers,Very Good,95.00,48.00,Vinted,44,Grey
+14,Nike,Jacket,Like New,120.00,60.00,Vinted,L,Blue
+15,Zara,Jeans,Very Good,49.99,24.00,Wallapop,32,Light Blue
+16,Levi's,Denim Jacket,Good,110.00,52.00,Vinted,M,Dark Blue
+17,Mango,Blazer,Excellent,89.99,39.00,Vinted,S,Beige
+18,H&M,Skirt,Like New,25.99,12.00,Wallapop,M,Black
+19,Adidas,Joggers,Very Good,54.99,27.50,Vinted,L,Grey
+20,Under Armour,T-shirt,Good,34.99,15.00,Wallapop,M,White
+21,Zara,Dress,Excellent,59.99,29.00,Vinted,S,Green
+22,Calvin Klein,Shirt,Like New,69.99,35.00,Vinted,M,White
+23,Tommy Hilfiger,Polo,Very Good,79.99,38.00,Wallapop,L,Red
+24,Hollister,Hoodie,Good,55.00,26.50,Vinted,M,Blue
+25,Bershka,Top,Excellent,19.99,9.00,Wallapop,S,Pink
+26,Primark,Coat,Good,39.99,17.50,Vinted,L,Black
+27,Guess,Bag,Like New,120.00,65.00,Wallapop,One Size,Brown
+28,Nike,Leggings,Excellent,49.99,24.00,Vinted,M,Grey
+29,Adidas,Shorts,Good,39.99,18.00,Wallapop,L,Blue
+30,Zara,Sweater,Very Good,34.99,16.00,Vinted,M,White
