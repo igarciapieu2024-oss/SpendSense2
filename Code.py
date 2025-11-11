@@ -1,30 +1,13 @@
 #Algorithms 
-def find_smallest(users):
-    smallest_index = 0
-    smallest = users[smallest_index]['username'].lower()
-    for n in range(1, len(users)):
-        if users[n]['username'].lower() < smallest:
-            smallest_index = n
-            smallest = users[n]['username'].lower()
-    return smallest_index
-def selection_sort(users):
-    new_list = []
-    while users:
-        smallest_index = find_smallest(users)
-        new_list.append(users.pop(smallest_index))
-    return new_list
-def binary_search(users, username):
-    low = 0
-    high = len(users) - 1
-    while low <= high:
-        mid = (low + high) // 2
-        if users[mid]['username'].lower() == username.lower():
-            return mid
-        elif users[mid]['username'].lower() < username.lower():
-            low = mid + 1
-        else:
-            high = mid - 1
-    return None
+def quicksort_desc(products): #QUICKSORT for sorting products from expensive to cheap
+    if len(products) <= 1: #if the len is smaller or equal to one we return the products list
+        return products
+    pivot = random.choice(products) # state the pivot randomly to avoid worst case scenario
+    higher = [x for x in products[1:] if x['price'] > pivot['price']] #  subarrays based on if more expensive or cheaper than the product
+    lower = [x for x in products[1:] if x['price'] <= pivot['price']]
+    return quicksort_desc(higher) + [pivot] + quicksort_desc(lower) # call recursively on high and low arrays
+positive_actions = []  # creation of two hash tables for storage of positive and negative actions
+negative_actions = []
 
 def find_smallest(users):
     smallest_index = 0
@@ -34,12 +17,14 @@ def find_smallest(users):
             smallest_index = n
             smallest = users[n]['username'].lower()
     return smallest_index
+    
 def selection_sort(users):
     new_list = []
     while users:
         smallest_index = find_smallest(users)
         new_list.append(users.pop(smallest_index))
     return new_list
+    
 def binary_search(users, username):
     low = 0
     high = len(users) - 1
@@ -53,9 +38,12 @@ def binary_search(users, username):
             high = mid - 1
     return None
 users = []
+
 #CREATION OF THE REGISTRATION PAGE
 # ALGORITHM REGISTRATION
+
 def register():
+    
     print("REGISTRATION")
     # WE ASK FOR INFORMATION TO THE USER
     name = input("Enter username: ")
@@ -84,7 +72,9 @@ def register():
         })
     print("Welcome, you have been registered!")
     return login() # And we call log in for user introducing the credentials
+    
 # ALGORITHM LOGIN
+
 def login():
     print("LOGIN")
     username = input("Enter username: ") #  the user is asked their credentials
@@ -143,7 +133,9 @@ def home_page():
             return metrics_page()  # IF 3 WE CHOOSE IT RETURNS TO METRICS
         else:
             print("Invalid option.\n")
+            
 #Creation of a function so that user chooses to upload image from camera or gallery
+
 def upload_image():
     print("You have chosen 'Upload Image'")
     print("'Choose from Gallery or Take photo?'")
@@ -158,6 +150,7 @@ def upload_image():
         print("Invalid option. We return to the home page ")
         return home_page()
 #Creation of the function of the gallery
+
 def gallery_flow():
     print("System requests gallery access")
     permission = input("Grant permission? (yes/no): ").lower() # Ask user for permission
@@ -171,6 +164,7 @@ def gallery_flow():
         return home_page()
 
 #Creation of the function of the camera
+
 def camera_flow():
     print("System requests camera access")
     permission = input("Grant permission? (yes/no): ").lower() # ask user for permission
@@ -184,6 +178,7 @@ def camera_flow():
         return home_page()
 recognized_products = [] # creation of a hash table and dictionary
 # function of the photo recognition by the system once provided the photo by the user to ask user for label
+
 def photo_and_product_recognition():
     print("System uploads photo")
     print("AI recognizes clothing successfully!")
@@ -242,31 +237,48 @@ def calculate_metrics(product):
     else:
         print("Redirecting to Smart Shopping Cart...\n")
         return smart_cart() # IF NOT WE CALL SMART CART FUNCTION HOME PAGE
-      
+        
+def load_vinted_data():
+    with open('vinted_dataset.json', 'r') as file:
+        return json.load(file)   
+        
 def show_second_hand_options(product):
     print("\nSHOWING SECOND-HAND ALTERNATIVES")
-    print("Fetching second-hand data ")
-    # NOW WE SIMULATE A HASH TABLE BUILD THROUGH THE APPIS INTERCONNECTED WITH SECOND-HAND MARKETS
-    alternatives = [
-        {"source": "VintageStore", "price": round(product["price"] * 0.6, 2)},
-        {"source": "ReuseApp", "price": round(product["price"] * 0.5, 2)},
-        {"source": "EcoWear", "price": round(product["price"] * 0.4, 2)}
-    ]
+    print("Fetching second-hand data...")
+    data = load_vinted_data()  # Load external dataset
+    matches = []
+    # If data is opened, we search for matches
+    if data:
+        matches = [d for d in data if d["brand"].lower() == product["brand"].lower()]
+    # If there are no matches, we use  simulated alternatives more deeper
+    if not matches:
+        print("No direct matches found in dataset. Showing default simulated options:")
+        alternatives = [
+            {"source": "VintageStore", "price": round(product["price"] * 0.6, 2)},
+            {"source": "ReuseApp", "price": round(product["price"] * 0.5, 2)},
+            {"source": "EcoWear", "price": round(product["price"] * 0.4, 2)}
+        ]
+    else:
+        print(f"Found {len(matches)} second-hand alternatives for {product['brand']}:")
+        alternatives = []
+        for m in matches[:]: show matches
+            alt_price = round(float(m.get("second_hand_price", product["price"] * 0.6)), 2)
+            alt_source = m.get("source", "Vinted")
+            alternatives.append({
+                "source": alt_source,
+                "price": alt_price
+            })
+    # Display results
     print("\nSECOND-HAND OPTIONS")
-    for alt in alternatives: # WE GO THROUGH ALL THE ALTERNATIVES TO DISPLAY IT TO THE USER
+    for alt in alternatives:
         print(f"- {alt['source']} : {alt['price']}€")
-    product["alternatives"] = alternatives # Finally all the alternatives are introduced to each of the product so stored in hash tables dictionary
+    # Finally all the alternatives are introduced to each of the product so stored in hash tables dictionary 
+    product["alternatives"] = alternatives
     print("\nAlternatives have been added to the Smart Shopping Cart.\n")
-    return smart_cart() # we return to the smart cart home page
+    return smart_cart()  # redirect to the smart cart 
+
 import random
 
-def quicksort_desc(products): #QUICKSORT for sorting products from expensive to cheap
-    if len(products) <= 1: #if the len is smaller or equal to one we return the products list
-        return products
-    pivot = random.choice(products) # state the pivot randomly to avoid worst case scenario
-    higher = [x for x in products[1:] if x['price'] > pivot['price']] #  subarrays based on if more expensive or cheaper than the product
-    lower = [x for x in products[1:] if x['price'] <= pivot['price']]
-    return quicksort_desc(higher) + [pivot] + quicksort_desc(lower) # call recursively on high and low arrays
 positive_actions = []  # creation of two hash tables for storage of positive and negative actions
 negative_actions = []
 
