@@ -23,18 +23,18 @@ The project applies multiple core algorithms learned in class. We used arrays, l
   
 
 # Features 
-**Product Recognition:** Upload an image of an item to extraxt its brand, price and origin.   
+- **Product Recognition:** Upload an image of an item to extraxt its brand, price and origin.   
 
-**Financial Awareness:** Converts price into hours of work based on user salary data          
+- **Financial Awareness:** Converts price into hours of work based on user salary data          
 
-**Environmental Awarness:** Calculates carbon footprtint using API data and associations' databases. 
+- **Environmental Awarness:** Calculates carbon footprtint using API data and associations' databases. 
 
 
-**Alternative finder:** Suggests second-hand or eco-friendly options via integrates marketplace APIs, like Wallapop or Vinted 
+- **Alternative finder:** Suggests second-hand or eco-friendly options via integrates marketplace APIs, like Wallapop or Vinted 
 
-**Smart Shopping Cart:** Tracks spending vs. savings and visualizes progress over time. 
+- **Smart Shopping Cart:** Tracks spending vs. savings and visualizes progress over time. 
 
-**Gamification:** Rewards users for sustainable desicions through progress metrics. 
+- **Gamification:** Rewards users for sustainable desicions through progress metrics. 
 
 # Files in the Directory 
 
