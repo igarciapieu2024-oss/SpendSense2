@@ -41,13 +41,12 @@ The project applies multiple core algorithms learned in class. We used arrays, l
 
 | **File/Folder** | **Description** |
 |-----------------|-----------------|
-| `app.py` | Main file that runs the Flask web app and handles routing logic. |
-| `algorithm.py` | Contains the search, sorting, and recommendation algorithms. |
+| `Code.py` | Main file that runs the Flask web app and handles routing logic. Contains the search, sorting, and recommendation algorithms. |
+| `Code_complementary_Binary_Search_Treee.py` | file with possible future implementation to offer lower running time (not actual app) |
 | `data/` | Includes environmental impact datasets and product examples. |
 | `static/` | CSS, images, and front-end assets used in the app interface. |
 | `templates/` | HTML templates (Home, Upload, Results, Metrics). |
 | `README.md` | The document you’re reading now. |
-| `requirements.txt` | List of required Python dependencies. |
 
 # Installation and Usage 
 **Step-by-Step Setup:**
