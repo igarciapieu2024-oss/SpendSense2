@@ -70,8 +70,10 @@ The project applies multiple core algorithms learned in class. We used arrays, l
 - Save your results or share them
   
 # Algorithm Usage
-We show how selection sort and quicksort can be implemented for sorting problems such as in the smart cart sorting from more expensive to less cheaper, the implementation of quicksort let us 
-see how when used it the running time was slower 0(nlogn).Moreover we used hash tables for preventing duplicates and catching and memorizing tasks for example in the users registration and log in, which allowed us not to implement a simple search that increase our running time and also avoid the problem of have two users that are the same.
+Our goal was the implementation of many algorithms to evaluate direct comparison and also prove real-word applications in different cases. 
+We show how selection sort and quicksort can be implemented for sorting problems such as in the smart cart sorting from more expensive to less cheaper. In fact, the implementation of quicksort let us see how when used it the running time was slower 0(nlogn).
+For searching elements we also implemented the usage of binary search for which selection sort was also needed to first have as an input the list in sorted format.
+Moreover we used hash tables for preventing duplicates, avoiding the problem of having two users that are the same and catching and memorizing tasks for example in the users registration and log in which allowed not to make the server work again and apply lookups to search for the user. 
 # Further Improvements 
 
 - Implement user account storage (SQLite)
