@@ -71,9 +71,20 @@ The project applies multiple core algorithms learned in class. We used arrays, l
   
 # Algorithm Usage
 Our goal was the implementation of many algorithms to evaluate direct comparison and also prove real-word applications in different cases. 
-We show how selection sort and quicksort can be implemented for sorting problems such as in the smart cart sorting from more expensive to less cheaper. In fact, the implementation of quicksort let us see how when used it the running time was slower 0(nlogn).
-For searching elements we also implemented the usage of binary search for which selection sort was also needed to first have as an input the list in sorted format.
-Moreover we used hash tables for preventing duplicates, avoiding the problem of having two users that are the same and catching and memorizing tasks for example in the users registration and log in which allowed not to make the server work again and apply lookups to search for the user. 
+However we also found interesting getting the lowest running time as possible so made a complementary code "Code_complementary_Binary_Search_trees" to search for the minimum running time as possible. 
+
+Firstly in our main code directory which support the main application we used. 
+- Selection sort: for sorting the names in alphabetical order for then use the binary search which require sorted list. Running time was 0(n^2). 
+- Quicksort algorithm: We used both approaches for seeing the differences in the running time.We use quicksort_desc(), to sort the products from more expensive to cheaper in the section of smart_cart(). The specific use of this was because in this action we wanted a lower running time 0(nlogn) for users to see more quicy their cart.
+- Binary Search is used in the registration with the application of seeing if the user is not already registered, in the login to find the user credentials and in the metric calculation to search data about the users salary. The running time was of 0(logn), but as we had previously to sort it its running time increased.
+- Hash Tables are used to store structure data of users, the recognized products, positive and negative actions allowing access time of 0(1). 
+
+Secondly we could see how this runnning times were not as efficient so we dive less profundly in the application of Binary Search tree for future considerations in a future time
+- Binary Search Tree construction allowed a search and insertion in average of 0(logn) which would allowed a more faster way of sorting and searching for elements when the tree is ordered. In case of not ordered it would be 0(n)
+- Max Heap implementation with parent being always greater than the child in the sorting of products allow to access in 0(1) running time and insertion in 0(logn). With functions to reorganize itself to meet the properties
+- Hash tables being used as accessng tool provide in average case 0(1) running time
+- Simple Search 0(n) to go one by one through products of the database
+
 # Further Improvements 
 
 - Implement user account storage (SQLite)
