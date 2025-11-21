@@ -47,6 +47,7 @@ The project applies multiple core algorithms learned in class. We used arrays, l
 | `static/` | CSS, images, and front-end assets used in the app interface. |
 | `templates/` | HTML templates (Home, Upload, Results, Metrics). |
 | `README.md` | The document you’re reading now. |
+| `vinted_dataset.csv` | Dataset with second hand alternatives of Vinted. |
 
 # Installation and Usage 
 **Step-by-Step Setup:**
