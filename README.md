@@ -74,8 +74,8 @@ Our goal was the implementation of many algorithms to evaluate direct comparison
 However we also found interesting getting the lowest running time as possible so made a complementary code "Code_complementary_Binary_Search_trees" to search for the minimum running time as possible. 
 
 Firstly in our main code directory which support the main application we used. 
-- Selection sort: for sorting the names in alphabetical order for then use the binary search which require sorted list. Running time was 0(n^2). 
-- Quicksort algorithm: We used both approaches for seeing the differences in the running time.We use quicksort_desc(), to sort the products from more expensive to cheaper in the section of smart_cart(). The specific use of this was because in this action we wanted a lower running time 0(nlogn) for users to see more quicy their cart.
+- Selection sort: for sorting the names in alphabetical order for then use the binary search which require sorted list. Running time was 0(n^2). We used this approach for the internal flow as we do not require that large amount of time and we don`t risk space management as we do in quicksort (at same time of quicksort is done recursion which occupies more memory). 
+- Quicksort algorithm: We use quicksort_desc(), to sort the products from more expensive to cheaper in the section of smart_cart(). The specific use of this was because in this action we wanted a lower running time 0(nlogn) for users to see more quicy their cart. Here we assume a risk of space management due to also application of recursion inside the Quicksort algorithms. 
 - Binary Search is used in the registration with the application of seeing if the user is not already registered, in the login to find the user credentials and in the metric calculation to search data about the users salary. The running time was of 0(logn), but as we had previously to sort it its running time increased.
 - Hash Tables are used to store structure data of users, the recognized products, positive and negative actions allowing access time of 0(1). 
 
