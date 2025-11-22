@@ -3,7 +3,7 @@ SpendSense is positioned as the first digital solution in the Spanish ecommerce 
 
 # Description 
 SpendSense is a Python-based web app developed as part of the Algorithms and Data Structures course at IE University.
-The project applies multiple core algorithms learned in class. We used arrays, linked lists, Hash Maps, and OOP for data handling, to create a real-world solution that connects financial awareness with environmental responsibility.
+The project applies multiple core algorithms learned in class. We used data structures such as arrays or hash tables in Code.py and algorithms such as binary search, quicksort and selection sort. 
 <table>
   <tr>
     <td align="center">
