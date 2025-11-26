@@ -85,6 +85,38 @@ Secondly we could see how this runnning times were not as efficient so we dive l
 - Hash tables being used as accessng tool provide in average case 0(1) running time
 - Simple Search 0(n) to go one by one through products of the database
 
+# Algorithms Flow
+<pre> START
+  │
+  ├─→ LOGIN SCREEN
+  │   ├─ SELECTION SORT (ordena usuarios)
+  │   ├─ BINARY SEARCH (busca usuario)
+  │   └─ HASH TABLE (accede a password/salary)
+  │       │
+  │       └─→ HOME PAGE
+  │           │
+  ├─ 1. Upload Image
+  │   └─→ PHOTO RECOGNITION
+  │       └─ HASH TABLE (crea producto)
+  │           │
+  │           └─→ CALCULATE METRICS
+  │               ├─ SELECTION SORT (ordena usuarios)
+  │               ├─ BINARY SEARCH (busca usuario)
+  │               └─ HASH TABLE (accede a salary/hours)
+  │                   │
+  │                   └─→ Second-Hand Options
+  │                       └─ HASH TABLE (crea alternativas)
+  │
+  ├─ 2. View Smart Shopping Cart
+  │   └─ QUICKSORT (ordena por precio)
+  │   └─ HASH TABLE (accede a atributos)
+  │   └─ HASH TABLE (crea registros de acción)
+  │
+  ├─ 3. View Metrics
+  │   └─ HASH TABLE (lee acciones positivas/negativas)
+  │
+  └─ 4. Log Out → Vuelve a LOGIN  </pre> 
+
 # Further Improvements 
 
 - Implement user account storage (SQLite)
