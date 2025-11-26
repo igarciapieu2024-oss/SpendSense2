@@ -18,12 +18,14 @@ def find_smallest(users):
             smallest = users[n]['username'].lower()
     return smallest_index
     
-def selection_sort(users):
-    new_list = []
-    while users:
-        smallest_index = find_smallest(users)
-        new_list.append(users.pop(smallest_index))
-    return new_list
+def selection_sort_inplace(users):
+    #Sorts uses in alphabetical order avoiding consuming extra space
+    for i in range(len(users)):
+        # Find the smallest element from position i onwards
+        smallest_index = find_smallest(users, i)
+        # Elemnsts are directly swaped in the original list
+        users[i], users[smallest_index] = users[smallest_index], users[i]
+    return users
     
 def binary_search(users, username):
     low = 0
