@@ -89,33 +89,33 @@ Secondly we could see how this runnning times were not as efficient so we dive l
 <pre> START
   │
   ├─→ LOGIN SCREEN
-  │   ├─ SELECTION SORT (ordena usuarios)
-  │   ├─ BINARY SEARCH (busca usuario)
-  │   └─ HASH TABLE (accede a password/salary)
+  │   ├─ SELECTION SORT (sort users)
+  │   ├─ BINARY SEARCH (search users)
+  │   └─ HASH TABLE (acces to user info (passwords))
   │       │
   │       └─→ HOME PAGE
   │           │
   ├─ 1. Upload Image
   │   └─→ PHOTO RECOGNITION
-  │       └─ HASH TABLE (crea producto)
+  │       └─ HASH TABLE (store product)
   │           │
   │           └─→ CALCULATE METRICS
-  │               ├─ SELECTION SORT (ordena usuarios)
-  │               ├─ BINARY SEARCH (busca usuario)
-  │               └─ HASH TABLE (accede a salary/hours)
+  │               ├─ SELECTION SORT (sort user)
+  │               ├─ BINARY SEARCH (search user)
+  │               └─ HASH TABLE (access salary/hours)
   │                   │
   │                   └─→ Second-Hand Options
-  │                       └─ HASH TABLE (crea alternativas)
+  │                       └─ HASH TABLE (store alternatives created)
   │
   ├─ 2. View Smart Shopping Cart
-  │   └─ QUICKSORT (ordena por precio)
-  │   └─ HASH TABLE (accede a atributos)
-  │   └─ HASH TABLE (crea registros de acción)
+  │   └─ QUICKSORT (sort by price)
+  │   └─ HASH TABLE (access to attributes)
+  │   └─ HASH TABLE (store actions)
   │
   ├─ 3. View Metrics
-  │   └─ HASH TABLE (lee acciones positivas/negativas)
+  │   └─ HASH TABLE (read to display actions performed)
   │
-  └─ 4. Log Out → Vuelve a LOGIN  </pre> 
+  </pre> 
 
 # Further Improvements 
 
